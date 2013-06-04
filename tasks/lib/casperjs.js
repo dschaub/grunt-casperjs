@@ -31,6 +31,10 @@ exports.init = function(grunt) {
     if (options.post) {
       command += ' --post=' + options.post.join(',');
     }
+    
+    if (options.ignoreSSLErrors) {
+      command += ' --ignore-ssl-errors=yes';
+    }
 
     command += " " + filepath;
 
